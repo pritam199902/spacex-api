@@ -8,6 +8,10 @@ const schema = require("./schema.js")
 const app = express();
 app.use(cors())
 
+app.use("/", (req, res) => {
+    return res.redirect("/graphql")
+})
+
 app.use(
     '/graphql',
     graphqlHTTP({
