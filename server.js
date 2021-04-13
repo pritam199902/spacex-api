@@ -9,7 +9,8 @@ const app = express();
 app.use(cors())
 
 app.get("/", (req, res) => {
-    return res.redirect("/graphql")
+    res.send("Welcome!")
+    // return res.redirect("/graphql")
 })
 
 app.use(
